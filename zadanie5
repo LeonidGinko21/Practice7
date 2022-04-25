@@ -1,0 +1,17 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    string l;
+
+    ofstream object;
+    object.open("practice.txt");
+    cout << "Enter your string: \n";
+    cin >> l;
+
+    object << l;
+
+    object.close();
+    return 0;
