@@ -1,0 +1,18 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    system("chcp 65001");
+    string m;
+    ifstream file("practice.txt");
+
+    for(file >> m; !file.eof(); file >> m)
+        cout << m << endl;
+    if (file.eof())
+        cout << "Конец файла достигнут\n";
+
+    file.close();
+
+    return 0;
+}
