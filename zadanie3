@@ -1,0 +1,43 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    system("chcp 65001");
+
+    string line;
+
+    ifstream fin("practice.txt");
+    int k;
+    cout << "Введите чисо строк из файла, которое нужно прочитать:\n";
+    cin >> k;
+    for (int i = 1; i <= k; ++i){
+        getline(fin, line);
+        {
+            cout << line << endl;
+        }
+    }
+    
+    fin.close();
+
+    return 0;
+}
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    system("chcp 65001");
+
+    int k = 1000;
+    
+    char* buffer = new char[k+1]; buffer[k]=0;
+    ifstream file("practice.txt");
+
+    file.read(buffer,n);
+    cout << buffer;
+    file.close();
+
+    return 0;
+}
